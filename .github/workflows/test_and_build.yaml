@@ -96,12 +96,12 @@ jobs:
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           # REEMPLAZAR: Poner tu región de AWS aquí (ej: us-east-1)
-          aws-region: us-east-1 
+          aws-region: us-east-2 
           
       - name: Deploy CSV files to S3
         run: |
           # REEMPLAZAR: Poner el nombre de tu bucket de S3
-          aws s3 sync . s3://nombre-de-tu-bucket-f1/f1-results/ \
+          aws s3 sync . s3://f1-scenary-results/ \
             --exclude "*" --include "*.csv" 
             
           echo "Despliegue de escenarios CSV completado en S3."
