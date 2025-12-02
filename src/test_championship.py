@@ -1,7 +1,7 @@
 # test_scenario.py
 
 # Importa la función desde tu script principal, ahora llamado 'championship.py'
-from championship import calculate_f1_scenario
+from src.championship import calculate_f1_scenario
 
 
 def test_calculate_f1_scenario_returns_data():
